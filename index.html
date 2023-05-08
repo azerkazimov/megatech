@@ -23,10 +23,7 @@
         <link href="lib/slick/slick.css" rel="stylesheet">
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
 
-        <!-- *** [START] REQUIRED CSS FILES *** -->
-        <link href="https://lk.wapico.ru/widget/plugin/components/font-awesome/css/fontawesome.min.css" rel="stylesheet">
-        <link href="https://lk.wapico.ru/widget/plugin/czm-chat-support.css" rel="stylesheet">
-        <!-- *** [END] REQUIRED CSS FILES *** -->
+        
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -120,7 +117,7 @@
                                     <div class="dropdown-menu">
                                         <a href="ozmen.html" class="dropdown-item">Özmen mekanik mühendislik</a>
                                         <a href="protech.html" class="dropdown-item">PROTECH Technology</a>
-                                        <a href="#" class="dropdown-item">Tega Industries Limited</a>
+                                        <!-- <a href="#" class="dropdown-item">Tega Industries Limited</a> -->
                                     </div>
                                 </div>
                                 <a href="contact.html" class="nav-item nav-link">Contacts</a>
@@ -663,93 +660,7 @@
             
         </div>
 
-    <!-- *** [START] REQUIRED DIV *** -->
-	<div id="example"></div>
-	<!-- *** [END] REQUIRED DIV *** -->
-
-	<!-- *** [START] REQUIRED JS FILES *** -->
-	<script src="https://lk.wapico.ru/widget/plugin/components/jquery/jquery-1.9.0.min.js"></script>
-    <script src="https://lk.wapico.ru/widget/plugin/components/moment/moment.min.js"></script>
-    <script src="https://lk.wapico.ru/widget/plugin/components/moment/moment-timezone-with-data.min.js"></script>
-    <script src="https://lk.wapico.ru/widget/plugin/czm-chat-support.min.js"></script>
-    <script>
-
-    $('#example').czmChatSupport({
-
-        /* Button Settings */
-        button: {
-            position: "right", /* left, right or false. "position:false" does not pin to the left or right */
-            style: 1, /* Button style. Number between 1 and 7 */
-            src: '<i class="fab fa-whatsapp"></i>', /* Image, Icon or SVG */
-            backgroundColor: "#10c379", /* Html color code */
-            effect: 2, /* Button effect. Number between 1 and 7 */
-            notificationNumber: "1", /* Custom text or false. To remove, (notificationNumber:false) */
-            speechBubble: "How can I help you?", /* To remove, (speechBubble:false) */
-            pulseEffect: true, /* To remove, (pulseEffect:false) */
-            text: { /* For Button style larger than 1 */
-                title: "Need help? Chat with us", /* Writing is required */
-                description: "Customer Support", /* To remove, (description:false) */
-                online: "I'm Online", /* To remove, (online:false) */
-                offline: "I will be back soon" /* To remove, (offline:false) */
-            }
-        },
-
-        /* Popup Settings */
-        popup: {
-            automaticOpen: false, /* true or false (Open popup automatically when the page is loaded) */
-            outsideClickClosePopup: true, /* true or false (Clicking anywhere on the page will close the popup) */
-            effect: 1, /* Popup opening effect. Number between 1 and 15 */
-            header: {
-                backgroundColor: "#10c379", /* Html color code */
-            },
-
-            /* Representative Settings */
-            persons: [
-
-            /* Copy for more representatives [::Start Copy::] */
-            {
-                avatar: {
-                    src: '<img src="https://lk.wapico.ru/widget/assets/img/person/1.jpg" alt="">', /* Image, Icon or SVG */
-                    backgroundColor: "#ffffff", /* Html color code */
-                    onlineCircle: true /* Avatar online circle. To remove, (onlineCircle:false) */
-                },
-                text: {
-                    title: "Need help? Chat with us", /* Writing is required */
-                    description: "Customer Support", /* To remove, (description:false) */
-                    
-                    /* Used on one account only */
-                    message: "Hi there 🙂<br>How can I help you?", /* Shows message bubble. To remove, (message:false) */
-                    textbox: "Say anything!", /* Allows the visitor to write the message they want. This feature is currently only available on Whatsapp. To remove, (textbox:false) */
-                    button: false /* Except for Whatsapp, you only need to use the button. For example: (button:"Start Chat") To remove, (button:false) */
-                },
-                link: {
-                    desktop: "https://web.whatsapp.com/send?phone=994102141442&text=Hi", /* Writing is required */
-                    mobile: "https://wa.me/994102141442/?text=Hi" /* If it is hidden desktop link will be valid. To remove, (mobile:false) */
-                },
-                onlineDay: {
-                    /* Change the day you are offline like this. (sunday:false) */
-                    sunday: "00:00-23:59",
-                    monday: "00:00-23:59",
-                    tuesday: "00:00-23:59",
-                    wednesday: "00:00-23:59",
-                    thursday: "00:00-23:59",
-                    friday: "00:00-23:59",
-                    saturday: "00:00-23:59"
-                }
-            },
-            /* [::End Copy::] */
-
-            ]
-        },
-
-        /* Other Settings */
-        sound: true, /* true (default sound), false or custom sound. Custom sound example, (sound:'https://lk.wapico.ru/widget/assets/sound/notification.mp3') */
-        changeBrowserTitle: "New Message!", /* Custom text or false. To remove, (changeBrowserTitle:false) */
-        cookie: false, /* It does not show the speech bubble, notification number, pulse effect and automatic open popup again for the specified time. For example, do not show for 1 hour, (cookie:1) or to remove, (cookie:false) */
-    });
-
-    </script>
-	<!-- *** [END] REQUIRED JS FILES *** -->
+   
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
