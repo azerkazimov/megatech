@@ -1559,7 +1559,7 @@ a:focus {
 /*********** Sidebar CSS **********/
 /**********************************/
 .sidebar {
-    position: relative;
+    position: sticky;
     width: 100%;
     top: 0;
 }
