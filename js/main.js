@@ -136,3 +136,72 @@
     portfolioIsotope.isotope({ filter: $(this).data("filter") });
   });
 })(jQuery);
+
+// Scroll sidebar
+var stickySidebar = $('.sidebar');
+
+if (stickySidebar.length > 0) {	
+  var stickyHeight = stickySidebar.height(),
+      sidebarTop = stickySidebar.offset().top;
+}
+
+// on scroll move the sidebar
+// $(window).scroll(function () {
+//   if (stickySidebar.length > 0) {	
+//     var scrollTop = $(window).scrollTop();
+            
+//     if (sidebarTop < scrollTop) {
+//       stickySidebar.css('top', scrollTop - sidebarTop);
+
+//       // stop the sticky sidebar at the footer to avoid overlapping
+//       var sidebarBottom = stickySidebar.offset().top + stickyHeight,
+//           stickyStop = $('.single-content').offset().top + $('.main-content').height();
+//       if (stickyStop < sidebarBottom) {
+//         var stopPosition = $('.main-content').height() - stickyHeight;
+//         stickySidebar.css('top', stopPosition);
+//       }
+//     }
+//     else {
+//       stickySidebar.css('top', '0');
+//     } 
+//   }
+// });
+
+// $(window).resize(function () {
+//   if (stickySidebar.length > 0) {	
+//     stickyHeight = stickySidebar.height();
+//   }
+// });
+
+// updated version
+window.addEventListener("scroll", function() {
+  var stickySidebar = $('.sidebar');
+  var sidebarTop = stickySidebar.offset().top;
+  var stickyHeight = stickySidebar.outerHeight();
+  var scrollTop = $(window).scrollTop();
+  var mainContentHeight = $('.main-content').height();
+  var windowHeight = $(window).height();
+
+  if (stickySidebar.length > 0) {
+    if (sidebarTop < scrollTop) {
+      stickySidebar.css('top', scrollTop - sidebarTop);
+
+      var sidebarBottom = stickySidebar.offset().top + stickyHeight;
+      var stickyStop = $('.single-content').offset().top + mainContentHeight;
+
+      if (stickyStop < sidebarBottom) {
+        var stopPosition = mainContentHeight - stickyHeight;
+        stickySidebar.css('top', stopPosition);
+      }
+    } else {
+      stickySidebar.css('top', '0');
+    }
+  }
+});
+
+window.addEventListener("resize", function() {
+  var stickySidebar = $('.sidebar');
+  var stickyHeight = stickySidebar.outerHeight();
+});
+
+

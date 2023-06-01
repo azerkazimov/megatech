@@ -1561,11 +1561,12 @@ a:focus {
 .sidebar {
     position: relative;
     width: 100%;
+    top: 0;
 }
 
 @media(max-width: 991.98px) {
     .sidebar {
-        margin-top: 45px;
+        display: none;
     }
 }
 
@@ -2181,8 +2182,6 @@ a:focus {
         margin: 5px 0;
         text-align: center;
     }
-
-    
 }
 
 .whatsapp-widget-container {
