@@ -59,21 +59,24 @@
     var $videoSrcWithoutAutoPlay;
     $(".btn-play").click(function () {
       $videoSrc = $(this).data("src");
-      $videoSrcWithoutAutoPlay = $videoSrc.replace("?autoplay=1&amp;modestbranding=1&amp;showinfo=0", "");
+      $videoSrcWithoutAutoPlay = $videoSrc.replace(
+        "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
+        ""
+      );
     });
-  
+
     $("#videoModal").on("shown.bs.modal", function (e) {
       $("#video").attr(
         "src",
         $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
       );
     });
-  
+
     $("#videoModal").on("hide.bs.modal", function (e) {
       $("#video").attr("src", $videoSrcWithoutAutoPlay);
     });
   });
-  
+
   // Stop video when modal is closed
   $("#videoModal").on("hidden.bs.modal", function (e) {
     $("#videoModal iframe").attr("src", "");
@@ -138,14 +141,37 @@
 })(jQuery);
 
 // Scroll sidebar
-var stickySidebar = $('.sidebar');
+var stickySidebar = $(".sidebar");
 
-if (stickySidebar.length > 0) {	
+if (stickySidebar.length > 0) {
   var stickyHeight = stickySidebar.height(),
-      sidebarTop = stickySidebar.offset().top;
+    sidebarTop = stickySidebar.offset().top;
 }
 
+// toggle active class between nav bar items
 
+let currentPage = window.location.href;
+
+let navLinks = document.querySelectorAll(".nav-item");
+
+navLinks.forEach(function (link) {
+  if (link.href === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+
+$('.dropdown-item').on('click', function() {
+  // Remove 'active' class from all dropdown items
+  $('.dropdown-item').removeClass('active');
+  
+  // Add 'active' class to the clicked dropdown item
+  $(this).addClass('active');
+  
+  // Add 'active' class to the "Activities" link
+  $('.nav-link[href="service.html"]').addClass('active');
+});
 
 // == updated version sidebar sticky ==
 // window.addEventListener("scroll", function() {
@@ -177,5 +203,3 @@ if (stickySidebar.length > 0) {
 //   var stickySidebar = $('.sidebar');
 //   var stickyHeight = stickySidebar.outerHeight();
 // });
-
-

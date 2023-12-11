@@ -268,6 +268,33 @@ a:focus {
     .nav-bar .btn {
         display: none;
     }
+
+    .navbar-nav .dropdown-menu{
+        background-color: #030f27;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: white;
+        border-bottom: 1px solid #fdbd337c;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-group .dropdown-menu {
+        position: relative;
+        width: 100%;
+        top: 50px;
+        left: -120px;
+    }
+    .btn-group .dropdown-toggle {
+        font-size: 22px;
+        width: 60px;
+        position: relative;
+        left: 8px;
+        top: -4px;
+        color: #fdbe33;
+    }
 }
 
 
